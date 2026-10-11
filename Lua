@@ -1,0 +1,8 @@
+-- script_lock.lua
+-- ตัวอย่าง: สแกนหา HP แล้วทำให้ตาย / ล็อกเป้าแบบง่าย
+gg.clearResults()
+gg.searchNumber("100", gg.TYPE_FLOAT)
+gg.searchNumber("100", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0)
+local t = gg.getResults(10)
+gg.editAll("-999999", gg.TYPE_FLOAT)
+gg.toast("⚔️ LOCK ACTIVE")
